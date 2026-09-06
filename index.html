@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Greenfield Turf - premium football and cricket turf booking demo.">
+<title>Greenfield Turf | Book Your Slot</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav">
+  <div class="logo"><span>⚽</span> GREENFIELD <small>TURF</small></div>
+  <button class="menu" onclick="toggleMenu()">☰</button>
+  <nav id="navLinks">
+    <a href="#home">Home</a><a href="#about">About</a><a href="#sports">Sports</a>
+    <a href="#pricing">Pricing</a><a href="#gallery">Gallery</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a>
+    <button class="nav-btn" onclick="openBooking()">📅 Book Now</button>
+  </nav>
+</header>
+
+<main>
+<section id="home" class="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="eyebrow">PLAY • RELAX • REPEAT</p>
+    <h1>Your Favourite<br><strong>Turf Ground</strong><br>in the City</h1>
+    <p class="lead">Premium turf for football, cricket and more. Enjoy the best playing experience with top-notch facilities and easy booking.</p>
+    <div class="location">📍 Hubli, Karnataka &nbsp; • &nbsp; 🕐 Open 6 AM – 11 PM &nbsp; • &nbsp; ⭐ 4.8/5</div>
+    <div class="actions"><button class="primary" onclick="openBooking()">📅 Book Now</button><a class="secondary" href="#gallery">▶ View Gallery</a></div>
+  </div>
+  <div class="booking-card">
+    <h2>Book Your Slot</h2><p>Quick and easy booking in a few steps.</p>
+    <label>Date<input id="date" type="date"></label>
+    <label>Time<select id="time"><option value="">Choose time</option><option>6:00 AM</option><option>7:00 AM</option><option>8:00 AM</option><option>5:00 PM</option><option>6:00 PM</option><option>7:00 PM</option><option>8:00 PM</option><option>9:00 PM</option></select></label>
+    <label>Duration<select id="duration"><option>1 hour</option><option>2 hours</option></select></label>
+    <button class="check" onclick="checkSlot()">Check Availability →</button>
+    <p id="slotResult" class="result"></p>
+  </div>
+</section>
+
+<section id="sports" class="sports strip">
+  <div class="section-intro"><h2>Sports Available</h2><p>Play your favourite sport on our premium turf.</p></div>
+  <div class="sport">⚽<b>Football</b><small>5-a-side / 7-a-side</small></div>
+  <div class="sport">🏏<b>Cricket</b><small>With nets</small></div>
+  <div class="sport">🏸<b>Badminton</b><small>Indoor / outdoor</small></div>
+  <div class="sport">•••<b>And More</b><small>As per availability</small></div>
+</section>
+
+<section id="about" class="about section">
+  <div class="about-img"></div>
+  <div><p class="eyebrow dark">ABOUT OUR TURF</p><h2>Play Better, Feel Better</h2>
+  <p>Greenfield Turf is designed to give you the best sports experience with well-maintained grounds, a safe environment and useful facilities.</p>
+  <div class="features"><span>🌱 Well Maintained Turf</span><span>💡 Floodlights</span><span>🚿 Clean Washrooms</span><span>🚪 Changing Rooms</span><span>🅿️ Parking Space</span><span>💧 Drinking Water</span><span>🪑 Seating Area</span><span>🛡️ CCTV Security</span></div></div>
+</section>
+
+<section id="pricing" class="pricing">
+  <div class="section"><div class="price-head"><div><h2>Our Pricing</h2><p>Affordable rates for everyone. Choose your time and book now!</p></div><button class="primary" onclick="openBooking()">View All Prices</button></div>
+  <div class="price-grid">
+    <div class="price"><span>☀️ Morning</span><small>6 AM – 11 AM</small><strong>₹800<em>/hour</em></strong><button onclick="openBooking()">Book Now</button></div>
+    <div class="price"><span>☀️ Afternoon</span><small>11 AM – 5 PM</small><strong>₹700<em>/hour</em></strong><button onclick="openBooking()">Book Now</button></div>
+    <div class="price"><span>🌙 Evening</span><small>5 PM – 11 PM</small><strong>₹1,000<em>/hour</em></strong><button onclick="openBooking()">Book Now</button></div>
+  </div></div>
+</section>
+
+<section id="gallery" class="section">
+  <div class="heading"><h2>Gallery</h2><p>Take a look at our turf, facilities and more.</p></div>
+  <div class="gallery"><div class="gimg hero-photo"></div><div class="gimg g2"></div><div class="gimg g3"></div><div class="gimg g4"></div><div class="gimg g5"></div></div>
+</section>
+
+<section id="reviews" class="reviews"><div class="section"><div class="heading"><h2>What Our Players Say</h2><p>Real reviews from our customers.</p></div>
+<div class="review-grid"><article>⭐⭐⭐⭐⭐<h3>Rohit Sharma</h3><p>“Great turf and well maintained. The lighting is excellent and the staff is very supportive.”</p></article><article>⭐⭐⭐⭐⭐<h3>Sheha Patil</h3><p>“Best place to play football in Hubli. Clean facilities and easy booking process.”</p></article><article>⭐⭐⭐⭐⭐<h3>Karan Desai</h3><p>“We had a great experience playing cricket here. The pitch quality is really good.”</p></article></div></div></section>
+
+<section id="contact" class="contact section">
+  <div><p class="eyebrow dark">GET IN TOUCH</p><h2>Ready to Play?</h2><p>Book your slot today or contact us for group bookings and enquiries.</p></div>
+  <div class="contact-box"><p>📍 Hubli, Karnataka</p><p>📞 +91 98765 43210</p><p>💬 WhatsApp: +91 98765 43210</p><button class="primary" onclick="whatsapp()">💬 WhatsApp Us</button></div>
+</section>
+</main>
+
+<footer><div class="logo">⚽ GREENFIELD <small>TURF</small></div><p>© 2026 Greenfield Turf. Demo website for client presentation.</p><div><a href="#home">Home</a> · <a href="#pricing">Pricing</a> · <a href="#contact">Contact</a></div></footer>
+
+<div id="modal" class="modal" onclick="if(event.target===this)closeBooking()">
+  <div class="modal-box"><button class="close" onclick="closeBooking()">×</button><h2>Book Your Turf</h2><p>Demo booking form — connect this to a real database/payment system for the final website.</p>
+    <input id="name" placeholder="Your name"><input id="phone" placeholder="Phone number" type="tel">
+    <input id="mdate" type="date"><select id="mtime"><option>Choose time</option><option>6:00 AM</option><option>7:00 AM</option><option>8:00 AM</option><option>5:00 PM</option><option>6:00 PM</option><option>7:00 PM</option><option>8:00 PM</option><option>9:00 PM</option></select>
+    <button class="primary full" onclick="submitBooking()">Request Booking</button><p id="bookingResult" class="result"></p>
+  </div>
+</div>
+<script src="script.js"></script>
+</body></html>

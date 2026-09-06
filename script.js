@@ -1,0 +1,7 @@
+function toggleMenu(){document.getElementById("navLinks").classList.toggle("open")}
+function openBooking(){document.getElementById("modal").classList.add("show");document.getElementById("mdate").value=document.getElementById("date").value}
+function closeBooking(){document.getElementById("modal").classList.remove("show")}
+function checkSlot(){const d=document.getElementById("date").value,t=document.getElementById("time").value,r=document.getElementById("slotResult");if(!d||!t){r.textContent="Please select a date and time.";r.style.color="#c62828";return}r.textContent="✓ Slot appears available (demo)";r.style.color="#159447"}
+function submitBooking(){const n=document.getElementById("name").value,p=document.getElementById("phone").value,d=document.getElementById("mdate").value,t=document.getElementById("mtime").value,r=document.getElementById("bookingResult");if(!n||!p||!d||t==="Choose time"){r.textContent="Please fill all details.";r.style.color="#c62828";return}r.textContent="✓ Booking request received! (Demo only)";r.style.color="#159447"}
+function whatsapp(){window.open("https://wa.me/919876543210?text=Hi%20Greenfield%20Turf,%20I%20want%20to%20book%20a%20slot.","_blank")}
+const today=new Date().toISOString().split("T")[0];document.getElementById("date").min=today;document.getElementById("mdate").min=today;
